@@ -1,0 +1,32 @@
+<div class="col-md-6">
+  <form class="form" role="form">
+    <div class="form-group">
+      <label>First Name</label>
+      {{input type="text" classNames="form-control" value=model.firstName}}
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      {{input type="text" classNames="form-control" value=model.lastName}}
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      {{input type="text" classNames="form-control" value=model.username}}
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      {{input type="text" classNames="form-control" value=model.email}}
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      {{input type="password" classNames="form-control" value=model.password}}
+    </div>
+    <div class="form-group">
+      <button class="btn btn-default" {{action "signup"}}>Sign Up</button>&nbsp; or&nbsp;
+          {{#link-to 'signin' class="show-signup"}}Sign in{{/link-to}}
+    </div>
+    <div class="text-center text-danger">
+      <strong>{{serverErrorMessage}}</strong>
+    </div>
+  </form>
+</div>
+
